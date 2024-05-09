@@ -5,7 +5,7 @@
             <div class="drs-block__cards">
                 <div
                 v-for="dr of drs"
-                class="text-wrap drs-block__card pa-3"
+                class="text-wrap drs-block__card pa-3  font-ttlikes"
 
             >{{ dr }}</div>
             </div>
@@ -39,7 +39,6 @@ const props = defineProps({
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: TTLakes;
             transition: .3s all;
             text-align: center;
             font-size: 20px ;

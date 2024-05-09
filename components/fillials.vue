@@ -8,7 +8,7 @@
       class="py-0"
     >
       <v-tab 
-       class="fillials__swipper-title"
+       class="fillials__swipper-title  font-ttlikes"
       v-for="contact of contacts"
       :value="contact.id-1">{{ contact.title }}</v-tab>
     </v-tabs>
@@ -71,6 +71,7 @@ let tab = ref()
 <style lang="scss">
 .fillials__swipper-title{
   font-family: "Montserrat", sans-serif !important;
+
 }
 .lists{
   display: flex;

@@ -12,7 +12,7 @@
 </template>
 <script setup>
 useHead({
-  title: "Программа 'Страна Здоровья' Консультация специалиста бесплатно. Мы рядом - А. Султана 4в",
+  title: "Программа 'Страна Здоровья' Консультация специалиста бесплатно. Мы рядом ",
   link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://klinika-zdorovie.ru/wp-content/uploads/2021/03/favicon-80x80-optimized.png' }]
 })
 </script>

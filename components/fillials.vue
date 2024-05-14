@@ -1,16 +1,18 @@
 <template>
   <section class="fillials">
-        <h2 class="fillials__title">Наши Клиники</h2>    
+    <h2 class="fillials__title">Наши Клиники</h2>
     <v-tabs
       v-model="tab"
       align-tabs="center"
       color="pink-lighten-1"
       class="py-0"
     >
-      <v-tab 
-       class="fillials__swipper-title  font-ttlikes"
-      v-for="contact of contacts"
-      :value="contact.id-1">{{ contact.title }}</v-tab>
+      <v-tab
+        class="fillials__swipper-title font-ttlikes"
+        v-for="contact of contacts"
+        :value="contact.id - 1"
+        >{{ contact.title }}</v-tab
+      >
     </v-tabs>
 
     <v-tabs-window v-model="tab">
@@ -21,15 +23,15 @@
       >
         <v-container fluid>
           <v-row class="lists">
-            <DrsBlock :drs ="contacts[tab].drs"/>
-            <MoreOptions :options="contacts[tab].options"/>
-            <theContact :inf="contacts[tab]"/>
+            <DrsBlock :drs="contacts[tab].drs" />
+            <MoreOptions :options="contacts[tab].options" />
+            <theContact :inf="contacts[tab]" />
           </v-row>
         </v-container>
       </v-tabs-window-item>
     </v-tabs-window>
 
-        <!-- <ul class="fillials__lists">
+    <!-- <ul class="fillials__lists">
           <li 
           v-for="contact of contacts">
           <nuxt-link  class="fillials__list" :to="`fillials/${contact.id}`">
@@ -54,48 +56,44 @@
           </span></nuxt-link>
           </li>
         </ul> -->
- 
   </section>
-</template> 
+</template>
 <script setup>
-import { ref } from 'vue';
-import contacts from '../mocks/contactsMocks.js'
+import { ref } from "vue";
+import contacts from "../mocks/contactsMocks.js";
 
-let data = ref()
+let data = ref();
 
-onMounted(() => {
- 
-});
-let tab = ref()
+onMounted(() => {});
+let tab = ref();
 </script>
 <style lang="scss">
-.fillials__swipper-title{
+.fillials__swipper-title {
   font-family: "Montserrat", sans-serif !important;
-
 }
-.lists{
+.lists {
   display: flex;
   flex-direction: column;
 }
-.fillials{
+.fillials {
   padding-top: 80px;
 
-  .fillials__title{
+  .fillials__title {
     text-align: center;
     margin-bottom: 33px;
   }
 
-  .fillials__lists{
+  .fillials__lists {
     display: flex;
     gap: 18px;
     justify-content: center;
-    align-items:stretch;
+    align-items: stretch;
 
-      li{ 
-        width: 100%;
-        cursor: pointer;
-      }
-    .fillials__list{
+    li {
+      width: 100%;
+      cursor: pointer;
+    }
+    .fillials__list {
       height: 100%;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       background-color: #ffffff;
@@ -104,47 +102,47 @@ let tab = ref()
       color: #000000;
       display: flex;
       flex-direction: column;
-      transition: .3s ease-in-out;
-      &:hover{
+      transition: 0.3s ease-in-out;
+      &:hover {
         box-shadow: rgba(149, 157, 165, 0.7) 0px 8px 24px;
-        background-color: #DB004B;
+        background-color: #db004b;
         color: #ffffff;
-        .list__link{
+        .list__link {
           color: #ffffff;
         }
       }
-      .list__link{
+      .list__link {
         color: #000000;
         margin-left: 6px;
-        transition: .3s all;
-        &:hover{
-          opacity: .3;
+        transition: 0.3s all;
+        &:hover {
+          opacity: 0.3;
         }
       }
-      .list__title{
+      .list__title {
         font-size: 20px;
         padding-bottom: 35px;
         margin: 0 auto;
       }
-      .list__blocks{
+      .list__blocks {
         margin-bottom: 15px;
         font-size: 17px;
-        .tel-ico{
+        .tel-ico {
           margin-right: 8px;
         }
       }
-      .list__times{
+      .list__times {
         display: flex;
         justify-content: space-around;
 
-        .list__time{
+        .list__time {
           display: flex;
           flex-direction: column;
-          gap:17px;
+          gap: 17px;
           font-size: 18px;
-          .list__time-desc{
+          .list__time-desc {
             line-height: 25px;
-            opacity: .7;
+            opacity: 0.7;
             font-size: 16px !important;
           }
         }
@@ -152,14 +150,14 @@ let tab = ref()
     }
   }
 }
-@media(max-width:748px){ 
-  .list__times{
+@media (max-width: 748px) {
+  .list__times {
     flex-direction: column;
     gap: 33px;
   }
 }
-@media(max-width:850px){ 
-  .fillials__lists{
+@media (max-width: 850px) {
+  .fillials__lists {
     flex-direction: column;
   }
 }

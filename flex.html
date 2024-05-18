@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @media (min-width: 768px) {
+        .main {
+          display: flex;
+          /*align-items: flex-start;
+			align-items: center;
+			flex-direction: column;*/
+        }
+
+        .main-2 {
+          display: flex;
+          /*	justify-content: center flex-start flex-end;*/
+        }
+        .boxes {
+          width: 25%;
+        }
+      }
+      .main div,
+      .main-2 div {
+        border: 1px solid #734;
+        padding: 12px;
+      }
+      .main-2 {
+        flex-direction: column;
+      }
+      .box-1 {
+        flex: 6;
+        order: 2;
+      }
+      .box-2 {
+        flex: 2;
+        order: 3;
+      }
+      .box-3 {
+        flex: 2;
+        order: 1;
+      }
+    </style>
+    <title>Flexbox</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="box-1">
+        <h2>Box one</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+          recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde
+          vel perferendis iure doloremque beatae repellendus! Repellat fugit
+          sapiente autem.
+        </p>
+      </div>
+      <div class="box-2">
+        <h2>Box two</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+          recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde
+          vel perferendis iure doloremque beatae repellendus! Repellat fugit
+          sapiente autem.
+        </p>
+      </div>
+      <div class="box-3">
+        <h2>Box three</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+          recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde
+          vel perferendis iure doloremque beatae repellendus! Repellat fugit
+          sapiente autem.
+        </p>
+      </div>
+    </div>
+
+    <div class="main-2">
+      <div class="boxes">
+        <h2>Box four</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+          recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde
+          vel perferendis iure doloremque beatae repellendus! Repellat fugit
+          sapiente autem.
+        </p>
+      </div>
+      <div class="boxes">
+        <h2>Box five</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+          recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde
+          vel perferendis iure doloremque beatae repellendus! Repellat fugit
+          sapiente autem.
+        </p>
+      </div>
+      <div class="boxes">
+        <h2>Box six</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+          recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde
+          vel perferendis iure doloremque beatae repellendus! Repellat fugit
+          sapiente autem.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

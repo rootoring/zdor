@@ -1,0 +1,40 @@
+@media(min-width: 768px){
+		.main{
+			display: flex;	
+			/*align-items: flex-start;
+			align-items: center;
+			flex-direction: column;*/
+			}
+		
+		.main-2{
+			display: flex;
+		/*	justify-content: center flex-start flex-end;*/
+	
+		}
+		.boxes{
+			width: 25%;
+		}
+	}
+	.main div, .main-2 div{
+	border: 1px solid #734;
+	padding: 12px;
+			
+	}
+	.main-2{
+		flex-direction: column;
+	}
+	.box-1{
+
+		flex: 6;
+		order: 2;
+	}
+	.box-2{
+			flex: 2;
+				order: 3;
+	}
+	.box-3{
+		
+		flex: 2;
+		order: 1;
+	}
+	

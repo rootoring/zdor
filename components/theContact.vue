@@ -1,6 +1,6 @@
 <template>
   <section id="contacts" class="contact">
-    <div class="contact__block" v-html="inf.map"></div>
+    <div class="contact__block map" v-html="inf.map"></div>
     <div class="contact__block contact__block-right">
       <h2>Контакты</h2>
       <a target="_blank" :href="inf.mapLink">
@@ -68,6 +68,11 @@ const props = defineProps({
     flex-direction: column;
     .contact__block {
       width: 100%;
+    }
+    .map {
+      iframe {
+        height: 250px !important;
+      }
     }
   }
 }

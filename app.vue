@@ -7,10 +7,12 @@
       <AboutUs />
       <Promotions />
       <Fillials />
+      <Footer />
     </main>
   </div>
 </template>
 <script setup>
+import Footer from "./components/footer.vue";
 useHead({
   title:
     "Программа 'Страна Здоровья' Консультация специалиста бесплатно. Мы рядом ",

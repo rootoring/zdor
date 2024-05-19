@@ -205,7 +205,7 @@ header {
     padding: 10px 10px;
   }
   .header-blocks {
-    gap: 6px !important;
+    gap: 3px !important;
   }
   .logo {
     width: 70px !important;
@@ -224,7 +224,9 @@ header {
     align-items: center !important;
   }
   .head-btns {
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
   .header-block__logo {
     .header-block__cont-tel {
@@ -234,6 +236,24 @@ header {
         display: none;
       }
     }
+  }
+}
+@media (max-width: 410px) {
+  header {
+    padding: 0 5px 6px 5px !important;
+  }
+  .head-btn {
+    font-size: 12px;
+    padding: 7px;
+  }
+  .header-blocks {
+    gap: 1px !important;
+  }
+  .logo {
+    width: 60px !important;
+  }
+  .head-btns {
+    justify-content: space-between;
   }
 }
 </style>

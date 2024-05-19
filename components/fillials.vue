@@ -8,6 +8,7 @@
       class="py-0"
     >
       <v-tab
+        @click="addQueryParam(contact.id - 1)"
         class="fillials__swipper-title font-ttlikes"
         v-for="contact of contacts"
         :value="contact.id - 1"
@@ -30,42 +31,27 @@
         </v-container>
       </v-tabs-window-item>
     </v-tabs-window>
-
-    <!-- <ul class="fillials__lists">
-          <li 
-          v-for="contact of contacts">
-          <nuxt-link  class="fillials__list" :to="`fillials/${contact.id}`">
-          <a class="list__title list__link" target="_blank" :href="contact.mapLink">{{ contact.title }}</a>
-          <span class="list__blocks"><v-icon class="tel-ico" icon="mdi-phone" />Телефон: <a v-for="tel of contact.tel" class="list__link" target="_blank" :href="`tel:${tel}`">{{tel}}</a></span>
-          <span class="list__blocks"><v-icon class="tel-ico" icon="mdi-email" />E-mail:<a class="list__link" target="_blank" :href="`mailto:${contact.mail}`">{{contact.mail}}</a></span>
-          <span class="list__title">Время работы:</span>
-          <span class="list__times">
-            
-            <span class="list__time" v-if="contact.pol">
-              Поликлиника: <p class="list__time-desc" v-html="contact.pol"></p>
-            </span>
-            <span class="list__time" v-if="contact.mrt">
-              МРТ, КТ: <p  class="list__time-desc" v-html="contact.mrt"></p>
-            </span>
-            <span class="list__time" v-if="contact.lab">
-              Лаборатория: <p  class="list__time-desc" v-html="contact.lab"></p>
-            </span>
-            <span class="list__time" v-if="contact.timeWork">
-              <p  class="list__time-desc" v-html="contact.timeWork"></p>
-            </span>
-          </span></nuxt-link>
-          </li>
-        </ul> -->
+    <div id="contacts"></div>
   </section>
 </template>
 <script setup>
 import { ref } from "vue";
 import contacts from "../mocks/contactsMocks.js";
 
-let data = ref();
-
-onMounted(() => {});
+const router = useRouter();
+const route = useRoute();
 let tab = ref();
+const addQueryParam = (i) => {
+  router.push({
+    query: {
+      fillial: i,
+    },
+  });
+};
+onMounted(() => {
+  if (!route.query.fillial) return (tab.value = 0);
+  tab.value = route.query.fillial;
+});
 </script>
 <style lang="scss">
 .fillials__swipper-title {

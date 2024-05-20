@@ -20,4 +20,10 @@
     margin-top: 50px;
   }
 }
+@media (max-width: 748px) {
+  .aboutUs {
+    padding: 40px 8px 60px 8px;
+    text-align: center;
+  }
+}
 </style>

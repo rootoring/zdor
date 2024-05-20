@@ -2,7 +2,7 @@
   <section id="contacts" class="contact">
     <div class="contact__block map" v-html="inf.map"></div>
     <div class="contact__block contact__block-right">
-      <h2>Контакты</h2>
+      <h3>Контакты</h3>
       <a target="_blank" :href="inf.mapLink">
         <v-icon class="tel-ico" icon="mdi-map" />{{ inf.title }}</a
       >
@@ -38,7 +38,7 @@ const props = defineProps({
     color: #fff;
     gap: 20px;
 
-    h2 {
+    h3 {
       font-size: 28px;
       letter-spacing: 4px;
       font-weight: bolder;
@@ -74,6 +74,9 @@ const props = defineProps({
         height: 250px !important;
       }
     }
+  }
+  .contact__block-right {
+    padding: 25px !important;
   }
 }
 </style>

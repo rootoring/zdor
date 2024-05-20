@@ -2,25 +2,26 @@
   <section id="promotions" class="prom">
     <h2 class="prom__title">Акции</h2>
 
-    <v-container>
+    <v-container class="prom-contaner">
       <v-carousel v-model="currentSlide" hide-delimiters>
         <v-carousel-item v-for="(item, i) in items" :key="i">
           <v-sheet
-            class="d-flex align-center justify-center"
+            class="swdfwd d-flex align-center justify-center"
             style="width: 100vw; background-color: #f8f8f8"
           >
             <img
-              src="https://avatars.mds.yandex.net/get-maps-adv-crm/11387709/2a0000018e80cd47cc24d735634865d4cb9e/landing_background"
+              src="https://klinika-zdorovie.ru/wp-content/uploads/2024/02/stop-virus-3-scaled-optimized.jpg"
               alt="Slide Image"
               style="max-width: 100%; max-height: 100%"
             />
           </v-sheet>
         </v-carousel-item>
       </v-carousel>
-      <v-row class="mt-2 align-center justify-center">
+      <v-row class="my-row mt-2 align-center justify-center">
         <v-col cols="auto" v-for="(item, i) in items" :key="i">
           <v-btn
             icon
+            class="btn-dot"
             :class="{
               'active-dot': i === currentSlide,
               'inactive-dot': i !== currentSlide,
@@ -60,6 +61,16 @@ onUnmounted(() => {
 });
 </script>
 <style lang="scss">
+.prom-contaner {
+  max-width: 100% !important;
+}
+.my-row {
+  margin: 20px 0 0 0 !important;
+}
+.btn-dot {
+  max-width: 20px !important;
+  max-height: 20px !important;
+}
 img {
   width: 100%;
   height: 100% !important;
@@ -67,8 +78,7 @@ img {
 .prom {
   scroll-margin-top: 80px;
   background-color: #fff;
-  padding: 10px 15px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   .prom__title {
     text-align: center;
     margin-bottom: 20px;
@@ -82,7 +92,7 @@ img {
 }
 .v-carousel {
   width: 100vw;
-  height: 600px !important;
+  height: auto !important;
 }
 .v-carousel-item {
   width: 100vw;
@@ -93,6 +103,15 @@ img {
 .v-responsive__content {
   display: flex;
   align-items: center;
+}
+.v-window__left,
+.v-window__right {
+  color: transparent;
+  transition: color 0.3s;
+}
+.v-window__left:hover,
+.v-window__right:hover {
+  color: #e30043 !important; /* Цвет: розовый */
 }
 @media (max-width: 768px) {
   .v-window__left,
